@@ -1,25 +1,3 @@
-var sound = new Howl({
-  src: ['asserts/audio.mp3']
-});
-
-var form1 = docuement.getElementById("form1");
-var pristine = new pristine(form1);
-
-var btnPlay = document.getElementById("btnPlay");
-btnPlay.addEventListener ("click",function() {
-  sound.play()
-  btnPlay.className = "inhabilitar"
-  btnPause.className = 'habilitar'
-});
-
-var btnPause = document.getElementById ("btnPause")
-btnPause.addEventListener ("click",function() {
-  sound.pause()
-  btnPlay.className = "habilitar"
-  btnPause.className = 'inhabilitar'
-
-});
-
 
 const gsapEffects = [
   { 
@@ -57,10 +35,46 @@ gsapEffects.forEach(effect => {
   });
 });
 
-var popover = new bootstrap.Popover(document.querySelector('.helper'), {});
-
-
 let tl = gsap.timeline();
 tl.fadeSlideTo(".fadeSlideTo")
   .fadeSlideFrom(".fadeSlideFrom", 0)
-  .fadeSlideFromTo(".fadeSlideFromTo", 0)
+  .fadeSlideFromTo(".fadeSlideFromTo", 0);
+
+
+  var sound = new Howl({
+    src: ['asserts/audio.mp3']
+  });
+
+  
+  var btnPlay = document.getElementById("btnPlay");
+  btnPlay.addEventListener ("click",function() {
+    sound.play()
+    btnPlay.className = "inhabilitar"
+    btnPause.className = 'habilitar'
+  });
+  
+  var btnPause = document.getElementById ("btnPause")
+  btnPause.addEventListener ("click",function() {
+    sound.pause()
+    btnPlay.className = "habilitar"
+    btnPause.className = 'inhabilitar'
+  
+  });
+
+
+  var pristine;
+  window.onload = function () {
+  
+     var form = document.getElementById("form1");
+  
+     pristine = new Pristine(form);
+  
+     form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var valid = pristine.validate();
+        //alert('Form is valid: ' + valid);
+  
+     });
+  
+  
+  };
