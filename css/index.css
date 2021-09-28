@@ -9,7 +9,7 @@ body{
 
 #nav-bar {
     width: 300px;
-    height: 100vh;
+    height: 120vh;
     background-color:black;
     position: fixed;
 }
@@ -69,6 +69,7 @@ body{
     bottom: 20px;
 }
 
+
 main {
     width: calc(100% - 300px);
     float: right;
@@ -76,13 +77,15 @@ main {
 
 main section {
   width: 100%;
-  height: 150vh;  
+  height: 300vh;  
 }
 
 main #home{
     background-color: rgb(184, 184, 184);
     background-image: url("../asserts/imagen3.jpeg.crdownload");
     background-size: cover;
+    width: 100%;
+    height: 200vh;
 }
 
 
@@ -104,13 +107,6 @@ main #home .conten1 .parrafo1 {
    
    
 }
-
-main #home .content2 .imagen {
-       width: 200px;
-       height: 200px;
-       margin-top: 50px;
-   }
-
    
 
 main #home .content2 .imagen {
@@ -123,8 +119,8 @@ main #home .content2 .imagen {
 }
 
 main #home .content2 .video {
-    width: 199px;
-    height: 199px;
+    width: 200px;
+    height: 200px;
     margin-top: 50px;
     border: 1px solid white;
     margin-left: 100px;
@@ -179,18 +175,50 @@ main #service{
     background-color: rgb(184, 184, 184);
     background-image: url("../asserts/imagen5.jpg");
     background-size: cover;
+    width: 100%;
+    height: 170vh;
+    }
+
+    main #service .banner{
+        color: blanchedalmond;
+        font-size: 50px;
+
     }
 main #service .tabla{
-    
-    width: 150px;
-    height: 50px;
+ 
+    padding: 40px;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin-left: 100px
 }
 
+main #service .tabla .tituloTabla{
+
+    font-size: 20px;
+    text-align: center;
+    background-color: #85929E;
+}
+
+main #service .tabla .fila1{
+    font-size: 15px;
+    text-align: left;
+    background-color: #cccccc;
+}
+
+main #service .tabla .fila2{
+
+    font-size: 15px;
+    text-align: left;
+    background-color:#D7EBFF;
+}
 
 main #contact{
     background-color: rgb(184, 184, 184);
     background-image: url("../asserts/imagen3.jpeg.crdownload");
     background-size: cover;
+    width: 100%;
+    height: 250vh;
 }
 
 main #contact .forcontac{
@@ -202,10 +230,22 @@ main #contact .forcontac{
 
 }
 
-main #contact .from-container{
+main #contact .from-container {
 
     margin-top: 100px;
 
+}
+
+main #contact .from-container #form1 {
+ width:500px;
+ max-width: 100%;
+ margin-left: 100px;
+
+}
+
+main #contact .from-container .forcontac{
+
+ text-align: center;
 }
 
 main #contact .from-container .form-group label{
@@ -223,6 +263,10 @@ main #contact .form-check label{
 main #contact .calend label{
 
     color: blanchedalmond;
+}
+
+.form-group .text-help {
+    color: #c6dd91;
 }
   
   .info2 
@@ -266,3 +310,14 @@ main #contact .calend label{
           background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
           padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
       }
+
+      @media only screen and (min-width:320px) and (max-width:900px){
+
+        #nav-bar {
+            width: 300px;
+            height: 800hv;
+            background-color:darkslategrey;
+            position: fixed;
+        }
+        
+    }
